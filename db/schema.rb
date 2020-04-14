@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_042926) do
+ActiveRecord::Schema.define(version: 2020_04_14_072854) do
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "tenant_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_042926) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "plan"
     t.index ["name"], name: "index_tenants_on_name"
     t.index ["tenant_id"], name: "index_tenants_on_tenant_id"
   end
